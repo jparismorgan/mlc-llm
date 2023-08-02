@@ -3,6 +3,7 @@
 set -e
 set -u
 
+mkdir -p ../ios/dist
 mkdir -p build/ && cd build/
 
 cmake ../..\
