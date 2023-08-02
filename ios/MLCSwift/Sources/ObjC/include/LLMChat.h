@@ -4,7 +4,7 @@
 //
 // Exposed interface of Object-C, enables swift binding.
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+//#import <UIKit/UIKit.h>
 #include <os/proc.h>
 
 /**
@@ -118,5 +118,5 @@
  * @param prevPlaceholder The previous placeholder in the prompt, i.e. <Img>.
  * @param postPlaceholder The post placeholder in the prompt, i.e. </Img>.
  */
-- (void)prefillImage:(UIImage*)image prevPlaceholder:(NSString*)prevPlaceholder postPlaceholder:(NSString*)postPlaceholder;
+//- (void)prefillImage:(UIImage*)image prevPlaceholder:(NSString*)prevPlaceholder postPlaceholder:(NSString*)postPlaceholder;
 @end

@@ -20,7 +20,7 @@ class StartState : ObservableObject {
     private let fileManager: FileManager = FileManager.default
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
-    private var prebuiltLocalIds = Set<String>()
+//    private var prebuiltLocalIds = Set<String>()
     private var localIds = Set<String>()
     
     static let PrebuiltModelDir = "dist"
@@ -34,16 +34,19 @@ class StartState : ObservableObject {
     }
     
     private func loadPrebuiltModels() {
-        let bundleUrl = Bundle.main.bundleURL
+        let bundleUrl = Bundle.main.resourceURL
         // models in dist
         do {
-            let distDirUrl = bundleUrl.appending(path: StartState.PrebuiltModelDir)
+            let distDirUrl = bundleUrl!.appending(path: StartState.PrebuiltModelDir)
+            print("[StartState@loadPrebuiltModels] distDirUrl \(distDirUrl)")
             let contents = try fileManager.contentsOfDirectory(at: distDirUrl, includingPropertiesForKeys: nil)
             let modelDirs = contents.filter{$0.hasDirectoryPath}
+            print("[StartState@loadPrebuiltModels] modelDirs \(modelDirs)")
             for modelDir in modelDirs {
                 let modelConfigUrl = modelDir.appending(path: StartState.ModelConfigFileName)
                 if fileManager.fileExists(atPath: modelConfigUrl.path()) {
                     if let modelConfig = loadModelConfig(modelConfigUrl: modelConfigUrl) {
+                        print("[StartState@loadPrebuiltModels] adding modelConfig \(modelConfig)")
                         assert(modelDir.lastPathComponent == modelConfig.local_id)
                         addModelConfig(modelConfig: modelConfig, modelUrl: nil, isBuiltin: true)
                     }
@@ -56,20 +59,23 @@ class StartState : ObservableObject {
     }
     
     private func loadAppConfig() {
-        let bundleUrl = Bundle.main.bundleURL
+        let bundleUrl = Bundle.main.resourceURL
         // models in cache to download
         do {
             cacheDirUrl = fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0]
             var appConfigUrl = cacheDirUrl.appending(path: StartState.AppConfigFileName)
             if !fileManager.fileExists(atPath: appConfigUrl.path()) {
-                appConfigUrl = bundleUrl.appending(path: StartState.AppConfigFileName)
+//                appConfigUrl = bundleUrl.appending(path: "Contents/Resources").appending(path: StartState.AppConfigFileName)
+                appConfigUrl = bundleUrl!.appending(path: StartState.AppConfigFileName)
             }
-            assert(fileManager.fileExists(atPath: appConfigUrl.path()))
+            print("[StartState@loadAppConfig] appConfigUrl \(appConfigUrl)")
+            print("[StartState@loadAppConfig] appConfigUrl.path() \(appConfigUrl.path())")
+//            assert(fileManager.fileExists(atPath: appConfigUrl.path()))
             let fileHandle = try FileHandle(forReadingFrom: appConfigUrl)
             let data = fileHandle.readDataToEndOfFile()
             appConfig = try decoder.decode(AppConfig.self, from: data)
             for model in self.appConfig.model_list {
-                if self.prebuiltLocalIds.contains(model.local_id) {
+                if self.localIds.contains(model.local_id) {
                     continue
                 }
                 let modelConfigUrl = cacheDirUrl
@@ -203,23 +209,30 @@ class StartState : ObservableObject {
     }
     
     private func addModelConfig(modelConfig: ModelConfig, modelUrl: URL?, isBuiltin: Bool) {
+        print(" modelConfig.local_id \(modelConfig.local_id) modelConfig.display_name \(modelConfig.display_name) modelUrl \(modelUrl) isBuiltin \(isBuiltin)")
+
+        print("localIds \(localIds)")
         assert(!localIds.contains(modelConfig.local_id))
         localIds.insert(modelConfig.local_id)
         var modelBaseUrl: URL
         
+        print("modelUrl \(modelUrl?.absoluteString)")
+        
         // local-id dir should exist
         if modelUrl == nil {
             // prebuilt model in dist
-            modelBaseUrl = Bundle.main.bundleURL.appending(path: StartState.PrebuiltModelDir).appending(path: modelConfig.local_id)
+            modelBaseUrl = Bundle.main.resourceURL!.appending(path: StartState.PrebuiltModelDir).appending(path: modelConfig.local_id)
         } else {
             // download model in cache
             modelBaseUrl = cacheDirUrl.appending(path: modelConfig.local_id)
         }
-        assert(fileManager.fileExists(atPath: modelBaseUrl.path()))
+        print("modelBaseUrl \(modelBaseUrl.path())")
+//        assert(fileManager.fileExists(atPath: modelBaseUrl.path()))
         
         // mlc-chat-config.json should exist
         let modelConfigUrl = modelBaseUrl.appending(path: StartState.ModelConfigFileName)
-        assert(fileManager.fileExists(atPath: modelConfigUrl.path()))
+        print("modelConfigUrl \(modelConfigUrl.path())")
+//        assert(fileManager.fileExists(atPath: modelConfigUrl.path()))
         
         models.append(ModelState(modelConfig: modelConfig, modelUrl: modelUrl, modelDirUrl: modelBaseUrl, startState: self, chatState: chatState))
         if modelUrl != nil && !isBuiltin {

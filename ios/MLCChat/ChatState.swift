@@ -210,7 +210,7 @@ class ChatState : ObservableObject {
                 backend.unloadImageModule()
             }
             backend.unload()
-            let vram = os_proc_available_memory()
+            let vram = 100000000000 // os_proc_available_memory()
             if (vram < estimatedVRAMReq) {
                 let reqMem = String (
                     format: "%.1fMB", Double(estimatedVRAMReq) / Double(1 << 20)
@@ -289,24 +289,24 @@ class ChatState : ObservableObject {
         }
     }
 
-    func requestProcessImage(image: UIImage) {
-        assert(getModelChatState() == .PendingImageUpload)
-        switchToProcessingImage()
-        threadWorker.push {[self] in
-            assert(messages.count > 0)
-            DispatchQueue.main.async { [self] in
-                updateMessage(role: .bot, message: "[System] Processing image")
-            }
-            // step 1. resize image
-            let new_image = resizeImage(image: image, width: 112, height: 112)
-            // step 2. prefill image by backend.prefillImage()
-            backend.prefillImage(new_image, prevPlaceholder: "<Img>", postPlaceholder: "</Img> ")
-            DispatchQueue.main.async { [self] in
-                updateMessage(role: .bot, message: "[System] Ready to chat")
-                switchToReady()
-            }
-        }
-    }
+//    func requestProcessImage(image: UIImage) {
+//        assert(getModelChatState() == .PendingImageUpload)
+//        switchToProcessingImage()
+//        threadWorker.push {[self] in
+//            assert(messages.count > 0)
+//            DispatchQueue.main.async { [self] in
+//                updateMessage(role: .bot, message: "[System] Processing image")
+//            }
+//            // step 1. resize image
+//            let new_image = resizeImage(image: image, width: 112, height: 112)
+//            // step 2. prefill image by backend.prefillImage()
+//            backend.prefillImage(new_image, prevPlaceholder: "<Img>", postPlaceholder: "</Img> ")
+//            DispatchQueue.main.async { [self] in
+//                updateMessage(role: .bot, message: "[System] Ready to chat")
+//                switchToReady()
+//            }
+//        }
+//    }
 
     func isCurrentModel(localId: String) -> Bool {
         return self.localId == localId

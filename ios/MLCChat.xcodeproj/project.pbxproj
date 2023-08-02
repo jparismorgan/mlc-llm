@@ -12,6 +12,20 @@
 		1453A4D12A1354B9001B909F /* StartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A4CC2A1354B9001B909F /* StartState.swift */; };
 		1453A4D22A1354B9001B909F /* ModelConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A4CD2A1354B9001B909F /* ModelConfig.swift */; };
 		1453A4D32A1354B9001B909F /* ModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A4CE2A1354B9001B909F /* ModelState.swift */; };
+		4F9AF9292A796C0300A2D1FC /* StartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A4CC2A1354B9001B909F /* StartState.swift */; };
+		4F9AF92A2A796C0300A2D1FC /* MLCChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D643B229F99A7F004DDAA4 /* MLCChatApp.swift */; };
+		4F9AF92B2A796C0300A2D1FC /* ChatState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D643C029F99B07004DDAA4 /* ChatState.swift */; };
+		4F9AF92C2A796C0300A2D1FC /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D643C229F99B07004DDAA4 /* ChatView.swift */; };
+		4F9AF92D2A796C0300A2D1FC /* ModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A4CE2A1354B9001B909F /* ModelState.swift */; };
+		4F9AF92E2A796C0300A2D1FC /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D643C729F99B34004DDAA4 /* MessageView.swift */; };
+		4F9AF92F2A796C0300A2D1FC /* ModelConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A4CD2A1354B9001B909F /* ModelConfig.swift */; };
+		4F9AF9302A796C0300A2D1FC /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A4CB2A1354B9001B909F /* ModelView.swift */; };
+		4F9AF9312A796C0300A2D1FC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453A4CA2A1354B9001B909F /* StartView.swift */; };
+		4F9AF9332A796C0300A2D1FC /* MLCSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4F9AF9272A796C0300A2D1FC /* MLCSwift */; };
+		4F9AF9352A796C0300A2D1FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0D643B929F99A80004DDAA4 /* Preview Assets.xcassets */; };
+		4F9AF9362A796C0300A2D1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0D643B629F99A80004DDAA4 /* Assets.xcassets */; };
+		4F9AF9392A796C0300A2D1FC /* app-config.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = C09834182A16F4CB00A05B51 /* app-config.json */; };
+		4F9AF93A2A796C0300A2D1FC /* dist in CopyFiles */ = {isa = PBXBuildFile; fileRef = C06A74E029F99C9F00BC4BE6 /* dist */; };
 		A773CC652A5DC98200467BFE /* ImageProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773CC642A5DC98200467BFE /* ImageProcessing.swift */; };
 		C06A74F229F9A78800BC4BE6 /* dist in CopyFiles */ = {isa = PBXBuildFile; fileRef = C06A74E029F99C9F00BC4BE6 /* dist */; };
 		C09834192A16F4E000A05B51 /* app-config.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = C09834182A16F4CB00A05B51 /* app-config.json */; };
@@ -25,6 +39,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4F9AF9372A796C0300A2D1FC /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F9AF9382A796C0300A2D1FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				4F9AF9392A796C0300A2D1FC /* app-config.json in CopyFiles */,
+				4F9AF93A2A796C0300A2D1FC /* dist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C06A74F129F9A78000BC4BE6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,6 +89,8 @@
 		1453A4CC2A1354B9001B909F /* StartState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartState.swift; sourceTree = "<group>"; };
 		1453A4CD2A1354B9001B909F /* ModelConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelConfig.swift; sourceTree = "<group>"; };
 		1453A4CE2A1354B9001B909F /* ModelState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelState.swift; sourceTree = "<group>"; };
+		4F9AF93E2A796C0300A2D1FC /* MLCChat-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MLCChat-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F9AF93F2A796C0400A2D1FC /* MLCChat copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MLCChat copy-Info.plist"; path = "/Users/parismorgan/repo/mlc-llm/ios/MLCChat copy-Info.plist"; sourceTree = "<absolute>"; };
 		A773CC642A5DC98200467BFE /* ImageProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessing.swift; sourceTree = "<group>"; };
 		C06A74E029F99C9F00BC4BE6 /* dist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dist; sourceTree = "<group>"; };
 		C06A74E629F9A1DF00BC4BE6 /* MLCChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MLCChat.entitlements; sourceTree = "<group>"; };
@@ -69,6 +106,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4F9AF9322A796C0300A2D1FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F9AF9332A796C0300A2D1FC /* MLCSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0D643AC29F99A7F004DDAA4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,6 +133,7 @@
 				C0D643B129F99A7F004DDAA4 /* MLCChat */,
 				C0D643B029F99A7F004DDAA4 /* Products */,
 				C0D643C929F99BDA004DDAA4 /* Frameworks */,
+				4F9AF93F2A796C0400A2D1FC /* MLCChat copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				C0D643AF29F99A7F004DDAA4 /* MLCChat.app */,
+				4F9AF93E2A796C0300A2D1FC /* MLCChat-macos.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +193,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4F9AF9262A796C0300A2D1FC /* MLCChat-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F9AF93B2A796C0300A2D1FC /* Build configuration list for PBXNativeTarget "MLCChat-macos" */;
+			buildPhases = (
+				4F9AF9282A796C0300A2D1FC /* Sources */,
+				4F9AF9322A796C0300A2D1FC /* Frameworks */,
+				4F9AF9342A796C0300A2D1FC /* Resources */,
+				4F9AF9372A796C0300A2D1FC /* Embed Libraries */,
+				4F9AF9382A796C0300A2D1FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MLCChat-macos";
+			packageProductDependencies = (
+				4F9AF9272A796C0300A2D1FC /* MLCSwift */,
+			);
+			productName = MLCChat;
+			productReference = 4F9AF93E2A796C0300A2D1FC /* MLCChat-macos.app */;
+			productType = "com.apple.product-type.application";
+		};
 		C0D643AE29F99A7F004DDAA4 /* MLCChat */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0D643BD29F99A80004DDAA4 /* Build configuration list for PBXNativeTarget "MLCChat" */;
@@ -198,11 +267,21 @@
 			projectRoot = "";
 			targets = (
 				C0D643AE29F99A7F004DDAA4 /* MLCChat */,
+				4F9AF9262A796C0300A2D1FC /* MLCChat-macos */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4F9AF9342A796C0300A2D1FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F9AF9352A796C0300A2D1FC /* Preview Assets.xcassets in Resources */,
+				4F9AF9362A796C0300A2D1FC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0D643AD29F99A7F004DDAA4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +294,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4F9AF9282A796C0300A2D1FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F9AF9292A796C0300A2D1FC /* StartState.swift in Sources */,
+				4F9AF92A2A796C0300A2D1FC /* MLCChatApp.swift in Sources */,
+				4F9AF92B2A796C0300A2D1FC /* ChatState.swift in Sources */,
+				4F9AF92C2A796C0300A2D1FC /* ChatView.swift in Sources */,
+				4F9AF92D2A796C0300A2D1FC /* ModelState.swift in Sources */,
+				4F9AF92E2A796C0300A2D1FC /* MessageView.swift in Sources */,
+				4F9AF92F2A796C0300A2D1FC /* ModelConfig.swift in Sources */,
+				4F9AF9302A796C0300A2D1FC /* ModelView.swift in Sources */,
+				4F9AF9312A796C0300A2D1FC /* StartView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0D643AB29F99A7F004DDAA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +330,113 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		4F9AF93C2A796C0300A2D1FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MLCChat/MLCChat.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MLCChat/Preview Content\"";
+				DEVELOPMENT_TEAM = 76B6K77MKS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
+				INFOPLIST_FILE = MLCChat/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/parismorgan/repo/mlc-llm/osx/build/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Wl,-all_load",
+					"-lmlc_llm",
+					"-ltvm_runtime",
+					"-Wl,-noall_load",
+					"-ltokenizers_cpp",
+					"-lsentencepiece",
+					"-ltokenizers_c",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = parismorgan.mlcchat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4F9AF93D2A796C0300A2D1FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MLCChat/MLCChat.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MLCChat/Preview Content\"";
+				DEVELOPMENT_TEAM = 76B6K77MKS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
+				INFOPLIST_FILE = MLCChat/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/parismorgan/repo/mlc-llm/osx/build/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Wl,-all_load",
+					"-lmlc_llm",
+					"-ltvm_runtime",
+					"-Wl,-noall_load",
+					"-ltokenizers_cpp",
+					"-lsentencepiece",
+					"-ltokenizers_c",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = parismorgan.mlcchat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		C0D643BB29F99A80004DDAA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -356,18 +558,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MLCChat/MLCChat.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MLCChat/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3FR42MXLK9;
+				DEVELOPMENT_TEAM = 76B6K77MKS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = MLCChat/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires usage of camera to function properly.";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -381,7 +581,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/lib",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-Wl,-all_load",
 					"-lmodel_iphone",
@@ -392,10 +592,9 @@
 					"-lsentencepiece",
 					"-ltokenizers_c",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mlc.Chat;
+				PRODUCT_BUNDLE_IDENTIFIER = parismorgan.mlcchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "mlc-chat-iosappstore";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -415,13 +614,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MLCChat/Preview Content\"";
-				DEVELOPMENT_TEAM = 3FR42MXLK9;
+				DEVELOPMENT_TEAM = 76B6K77MKS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = MLCChat/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires usage of camera to function properly.";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -435,7 +633,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/lib",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-Wl,-all_load",
 					"-lmodel_iphone",
@@ -446,7 +644,7 @@
 					"-lsentencepiece",
 					"-ltokenizers_c",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mlc.Chat;
+				PRODUCT_BUNDLE_IDENTIFIER = parismorgan.mlcchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -459,6 +657,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4F9AF93B2A796C0300A2D1FC /* Build configuration list for PBXNativeTarget "MLCChat-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F9AF93C2A796C0300A2D1FC /* Debug */,
+				4F9AF93D2A796C0300A2D1FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C0D643AA29F99A7F004DDAA4 /* Build configuration list for PBXProject "MLCChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -480,6 +687,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4F9AF9272A796C0300A2D1FC /* MLCSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MLCSwift;
+		};
 		C0DDBE0C2A3BCD8000E9D060 /* MLCSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MLCSwift;
